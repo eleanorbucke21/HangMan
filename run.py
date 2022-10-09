@@ -6,7 +6,8 @@ import random
 from words import words
 import string
 
-print(words)
+name = input('Player name?')
+print('Hi', name, 'Lets play Hangman!')
 
 
 def get_word(words):
@@ -17,6 +18,7 @@ def get_word(words):
     return word.upper()
 
     print(word)
+    print('\n')
 
 
 def hangman():
@@ -30,7 +32,7 @@ def hangman():
     alphabet = set(string.ascii_uppercase)
     used_letters = set()
 
-    lives = 5
+    lives = 6
 
     while len(word_letters) > 0 and lives > 0:
         print('You have', lives, 'lives left. Letters already used: ', ' '.join(used_letters))
@@ -62,5 +64,9 @@ def hangman():
 
 hangman()
 
-user_input = input('Type something:')
-print(user_input)
+
+again = str(input("Do you want to play again (type yes or no): "))
+if again == "yes":
+    hangman()
+else:
+    name
