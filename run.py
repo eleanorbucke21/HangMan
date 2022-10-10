@@ -10,6 +10,8 @@ from visual import hangman_visual
 name = input('Player name?').upper()
 print('Hi', name, 'Lets play Hangman!')
 
+done = False
+
 
 def get_word(words):
     """
@@ -34,13 +36,14 @@ def hangman():
     used_letters = set()
     score = 0
 
-    lives = 6
+    allowed_errors = 6
 
-    while len(word_letters) > 0 and lives > 0:
-        print(name,',you have', lives, 'lives left. Letters already used: ', ' '.join(used_letters))
+    while allowed_errors > 0:
+        while len(word_letters) > 0:
+            print(name, ',you have', allowed_errors, 'lives left. Letters already used: ', ' '.join(used_letters))
 
-        word_list = [letter if letter in used_letters else '-' for letter in word]
-        print(hangman_visual[lives])
+            word_list = [letter if letter in used_letters else '-' for letter in word]
+        print(hangman_visual[allowed_errors])
         print('Current word:', ' '.join(word_list))
 
         user_letter = input('Guess a letter: ').upper()
@@ -50,8 +53,8 @@ def hangman():
                 word_letters.remove(user_letter)
 
             else:
-                lives = lives - 1
-                print('It is not there,',name,'try again')
+                allowed_errors = allowed_errors - 1
+                print('It is not there,', name, 'try again')
 
         elif user_letter in used_letters:
             print('You already used. Try again')
@@ -59,20 +62,23 @@ def hangman():
         else:
             print('invalid choice. Try again')
 
-    if lives == 0:
-        print('No more lives. The word was', word, '!!!')
-        print('Your score is',score)
-    else:
-        score = + 1
-        print('You got it!')
-        print('Your score is',score)
+        if allowed_errors == 0:
+            print('No more lives. The word was', word, '!!!')
+
+            print('Your score is ', score,)
+            break
+
+        if len(word_letters) == 0:
+            score = score + 1
+            print('You got it!')
+            print('Your score is ', score, )
+            word = get_word(words)
+            word_letters = set(word)
+            used_letters = set()
 
 
-hangman()
-
-
-again = str(input("Do you want to play again (type yes or no): "))
-if again == "yes":
+while not done:
     hangman()
-else:
-    name
+    again = str(input('Do you want to play again', name, '(type yes or no): '))
+    if again == 'no':
+        done = True
