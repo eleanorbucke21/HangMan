@@ -38,11 +38,10 @@ def hangman():
 
     allowed_errors = 6
 
-    while allowed_errors > 0:
-        while len(word_letters) > 0:
-            print(name, ',you have', allowed_errors, 'lives left. Letters already used: ', ' '.join(used_letters))
+    while allowed_errors > 0 and len(word_letters) > 0:
+        print(name, ',you have', allowed_errors, 'lives left. Letters already used: ', ' '.join(used_letters))
 
-            word_list = [letter if letter in used_letters else '-' for letter in word]
+        word_list = [letter if letter in used_letters else '-' for letter in word]
         print(hangman_visual[allowed_errors])
         print('Current word:', ' '.join(word_list))
 
@@ -58,7 +57,6 @@ def hangman():
 
         elif user_letter in used_letters:
             print('You already used. Try again')
-        
         else:
             print('invalid choice. Try again')
 
