@@ -34,7 +34,6 @@ def hangman():
     word_letters = set(word)
     alphabet = set(string.ascii_uppercase)
     used_letters = set()
-    score = 0
 
     allowed_errors = 6
 
@@ -62,14 +61,10 @@ def hangman():
 
         if allowed_errors == 0:
             print('No more lives. The word was', word, '!!!')
-
-            print('Your score is ', score,)
             break
 
         if len(word_letters) == 0:
-            score = score + 1
             print('You got it!')
-            print('Your score is ', score, )
             word = get_word(words)
             word_letters = set(word)
             used_letters = set()
@@ -77,6 +72,6 @@ def hangman():
 
 while not done:
     hangman()
-    again = str(input('Do you want to play again', name, '(type yes or no): '))
+    again = str(input('Do you want to play again? (type yes or no): '))
     if again == 'no':
         done = True
