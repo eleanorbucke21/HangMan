@@ -1,3 +1,5 @@
+<img src="/workspace/HangMan/markdown-demo/AmIResponsive.png" height='300' width = '500' />
+
 :desktop_computer: [Live Website] (https://hangmaneleanorb.herokuapp.com/)
 
 :open_file_folder: [Github Repository] (https://github.com/eleanorbucke21/HangMan)
@@ -12,8 +14,11 @@ HOMEPAGE
 * As a user I want to know what the site is about so I know what to expect from it.
 
 # Features
+
+<img src='/workspace/HangMan/markdown-demo/Terminal.png'/>
+
 ## 
-* The user is asked for their name.#
+* The user is asked for their name.
 * It shows a visual representation of a hangman when getting words wrong.
 * Users have six lives till the game ends on them if they haven't guessed the word.
 
@@ -35,6 +40,7 @@ HOMEPAGE
 
 ## Lighthouse
 ### Index Page
+<img src = '/workspace/HangMan/markdown-demo/Lighthouse.png'/>
 
 
 ## Responsiveness
