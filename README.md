@@ -102,4 +102,5 @@ This website was deploed on Heroku.
 
 ## Credits 
 ### Tutorials 
+* YouTube tutorial [Kylie Ying](https://www.youtube.com/watch?v=cJJTnI22IF8&list=PLqoebFJFAtg940mqPamWw4_ndWbnfqFqh)
 * Words from [Tom25 b](https://github.com/Tom25/Hangman/blob/master/wordlist.txt)
