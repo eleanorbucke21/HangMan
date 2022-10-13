@@ -1,4 +1,4 @@
-<img src="/workspace/HangMan/markdown-demo/AmIResponsive.png" height='300' width = '500' />
+<img src="markdown-demo/AmIResponsive.png" height='300' width = '500' />
 
 :desktop_computer: [Live Website] (https://hangmaneleanorb.herokuapp.com/)
 
@@ -15,7 +15,7 @@ HOMEPAGE
 
 # Features
 
-<img src='/workspace/HangMan/markdown-demo/Terminal.png'/>
+<img src='markdown-demo/Terminal.png'/>
 
 ## 
 * The user is asked for their name.
@@ -40,7 +40,7 @@ HOMEPAGE
 
 ## Lighthouse
 ### Index Page
-<img src = '/workspace/HangMan/markdown-demo/Lighthouse.png'/>
+<img src = 'markdown-demo/Lighthouse.png'/>
 
 
 ## Responsiveness
