@@ -1,5 +1,7 @@
 <img src="markdown-demo/AmIResponsive.png" height='300' width = '500' />
 
+A Game of hangman against the computer, there are 385 words to guess from. There is also visual representation of a hangman based on how many times a user inputs a letter not present. The user has six attempts before the game will ask if they want to replay.  
+
 :desktop_computer: [Live Website] (https://hangmaneleanorb.herokuapp.com/)
 
 :open_file_folder: [Github Repository] (https://github.com/eleanorbucke21/HangMan)
@@ -19,6 +21,7 @@ HOMEPAGE
 
 ## 
 * The user is asked for their name.
+* Names are validated, if a user enters a number they will be asked again for their name.
 * It shows a visual representation of a hangman when getting words wrong.
 * Users have six lives till the game ends on them if they haven't guessed the word.
 
