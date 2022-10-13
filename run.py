@@ -1,24 +1,28 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 import random
 from words import words
 import string
 from visual import hangman_visual
 
-name = input("What is your name?").lower()
+"""
+Ask for users name
+Validates the name
+"""
+name = input('What is your name?').upper()
 while not name.isalpha():
-    print("invalid name")
-    name = input("What is your name?").lower()
+    print('invalid name')
+    name = input('What is your name?').upper()
     print('Hi', name, 'Lets play Hangman!')
 
 done = False
 
+"""
+Gets a random word from the words.py file
+"""
+
 
 def get_word(words):
     """
-    random choice for word from list
+    Random choice for word from list
     """
     word = random.choice(words)
     return word.upper()
@@ -29,9 +33,11 @@ def get_word(words):
 
 def hangman():
     """
-    letters in the word
-    letters user has guessed
-    getting user input
+    Followed tutorial by Kylie Ying (https://www.youtube.com/watch?v=cJJTnI22IF8&list=PLqoebFJFAtg940mqPamWw4_ndWbnfqFqh&index=1&t=3s)
+    Letters in the word
+    Letters user has guessed
+    Getting user input
+    Validates for letters only
     """
     word = get_word(words)
     word_letters = set(word)
@@ -73,8 +79,14 @@ def hangman():
             used_letters = set()
 
 
+"""
+Asks if user wants to replay
+or quit the game
+"""
+
+
 while not done:
     hangman()
     again = str(input('Do you want to play again? (type yes or no): '))
-    if again == 'no':
+    if again == 'no' or 'NO':
         done = True

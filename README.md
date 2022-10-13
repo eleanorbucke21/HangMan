@@ -78,6 +78,23 @@ HOMEPAGE
     Samsung s20 | No appearance, responsiveness nor functionality issues. | Pass
     iphone 12 pro | No appearance, responsiveness nor functionality issues. | Pass
 
+### Testing
+
+* PEP8 was deprecated so I used pycodestyle to test my code.
+* I found that three of my lines of code were too long :
+    * Line 36.
+    * Line 50.
+    * Line 52.
+
+## Bugs
+
+### Solved Bugs
+
+* When testing I found that you could also enter numbers or symbols for a user name. 
+* I corrected this by adding this code: 
+    
+<img src='markdown-demo/Code Error.png'/>
+
 
 ## Deployment
 ### Gitpod
@@ -101,6 +118,6 @@ This website was deploed on Heroku.
 * Connect your GitHub repository and deploy as normal.
 
 ## Credits 
-### Tutorials 
+### Content 
 * YouTube tutorial [Kylie Ying](https://www.youtube.com/watch?v=cJJTnI22IF8&list=PLqoebFJFAtg940mqPamWw4_ndWbnfqFqh)
 * Words from [Tom25 b](https://github.com/Tom25/Hangman/blob/master/wordlist.txt)

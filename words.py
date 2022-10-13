@@ -1,3 +1,7 @@
+"""
+Copied from 
+(https://github.com/Code-Institute-Submissions/Hangman-8/blob/main/words.py)
+"""
 words = [
     'breeder',
     'concoct',
