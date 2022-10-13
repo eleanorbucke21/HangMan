@@ -7,8 +7,11 @@ from words import words
 import string
 from visual import hangman_visual
 
-name = input('Player name?').upper()
-print('Hi', name, 'Lets play Hangman!')
+name = input("What is your name?").lower()
+while not name.isalpha():
+    print("invalid name")
+    name = input("What is your name?").lower()
+    print('Hi', name, 'Lets play Hangman!')
 
 done = False
 
