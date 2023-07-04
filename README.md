@@ -47,7 +47,7 @@ HOMEPAGE
 
 # Technologies
 ## Languages used
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - 
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - was used for the back end programming of the site.
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Add interactive features to web page.
 
 ## Frameworks, Libraries and Programs Used
