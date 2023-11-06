@@ -6,9 +6,9 @@ A Game of hangman against the computer, there are 385 words to guess from. There
 
 <br>
 
-:desktop_computer: [Live Website] (https://hangmaneleanorb.herokuapp.com/)
+:desktop_computer: [Live Website](https://hangmaneleanorb.herokuapp.com/)
 
-:open_file_folder: [Github Repository] (https://github.com/eleanorbucke21/HangMan)
+:open_file_folder: [Github Repository](https://github.com/eleanorbucke21/HangMan)
 
 ---
 
