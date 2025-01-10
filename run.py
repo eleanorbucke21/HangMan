@@ -89,5 +89,12 @@ if __name__ == "__main__":
     """
     Runs the WebSocket server.
     """
-    asyncio.get_event_loop().run_until_complete(start_server)
-    asyncio.get_event_loop().run_forever()
+    import asyncio
+
+    async def start_server():
+        async with websockets.serve(main, "0.0.0.0", 8000):
+            print("Server started on ws://0.0.0.0:8000")
+            await asyncio.Future()  # Keep the server running
+
+    # Create and run the event loop
+    asyncio.run(start_server())
