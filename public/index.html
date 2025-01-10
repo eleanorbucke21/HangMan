@@ -14,12 +14,20 @@
     var ws = new WebSocket("wss://hangman-zr94.onrender.com");
 
     ws.onopen = function () {
+      term.writeln("Connected to the server!");
       new attach.attach(term, ws);
     };
 
-    ws.onerror = function (e) {
-      console.log(e);
+    ws.onmessage = function (event) {
+      // This handles all messages from the server
+      console.log("Server says:", event.data); // Logs server messages to the console
+      term.writeln(event.data); // Displays messages in the terminal
     };
+
+    ws.onerror = function (e) {
+      console.error("WebSocket error:", e);
+    };
+
     // Set focus in the terminal
     document.getElementsByClassName("xterm-helper-textarea")[0].focus();
   </script>
